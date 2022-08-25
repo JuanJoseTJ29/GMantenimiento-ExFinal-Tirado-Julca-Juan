@@ -1,3 +1,5 @@
+package src.main.board;
+
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 // -------------------------------------------------------------------------

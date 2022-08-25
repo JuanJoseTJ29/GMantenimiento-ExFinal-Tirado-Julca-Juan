@@ -1,3 +1,6 @@
+package src.main.board;
+
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.awt.Color;
 import javax.swing.JOptionPane;
@@ -12,7 +15,8 @@ import java.awt.event.MouseEvent;
  * @author Danielle Bushrow (dbushrow)
  * @version 2010.11.17
  */
-public class ChessGameEngine{
+public class ChessGameEngine
+    implements Serializable{
     private ChessGamePiece currentPiece;
     private boolean        firstClick;
     private int            currentPlayer;
@@ -115,19 +119,16 @@ public class ChessGameEngine{
         {
             if ( currentPiece.getColorOfPiece() == ChessGamePiece.BLACK ){
                 return true;
-            } else {
+            }
             return false;
-        }
         }
         else
         // white player
         {
             if ( currentPiece.getColorOfPiece() == ChessGamePiece.WHITE ){
                 return true;
-            }else{
-                return false;
             }
-
+            return false;
         }
     }
     /**
@@ -305,8 +306,10 @@ public class ChessGameEngine{
                 firstClick = true;
             }
             else
+            // user is just unselecting the current piece
             {
                 firstClick = true;
             }
-        }}
+        }
+    }
 }

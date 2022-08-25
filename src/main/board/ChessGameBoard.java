@@ -1,3 +1,5 @@
+package src.main.board;
+
 import java.util.ArrayList;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
@@ -16,7 +18,7 @@ import java.awt.GridLayout;
  */
 public class ChessGameBoard extends JPanel{
     private BoardSquare[][] chessCells;
-    private BoardListener   listener;
+    private BoardListener listener;
     // ----------------------------------------------------------
     /**
      * Returns the entire board.
@@ -148,7 +150,7 @@ public class ChessGameBoard extends JPanel{
             }
         }
         repaint();
- 
+        //revalidate();
         // only the combination of these two calls work...*shrug*
     }
     /**
@@ -157,6 +159,7 @@ public class ChessGameBoard extends JPanel{
      */
     public void initializeBoard(){
         resetBoard( false );
+        Color colorBackgorund;
         for ( int i = 0; i < chessCells.length; i++ ){
             for ( int j = 0; j < chessCells[0].length; j++ ){
                 ChessGamePiece pieceToAdd;
