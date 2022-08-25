@@ -115,16 +115,19 @@ public class ChessGameEngine{
         {
             if ( currentPiece.getColorOfPiece() == ChessGamePiece.BLACK ){
                 return true;
-            }
+            } else {
             return false;
+        }
         }
         else
         // white player
         {
             if ( currentPiece.getColorOfPiece() == ChessGamePiece.WHITE ){
                 return true;
+            }else{
+                return false;
             }
-            return false;
+
         }
     }
     /**
@@ -167,7 +170,6 @@ public class ChessGameEngine{
         else
         {
             board.resetBoard( false );
-            // System.exit(0);
         }
     }
     /**
@@ -303,10 +305,8 @@ public class ChessGameEngine{
                 firstClick = true;
             }
             else
-            // user is just unselecting the current piece
             {
                 firstClick = true;
             }
-        }
-    }
+        }}
 }
